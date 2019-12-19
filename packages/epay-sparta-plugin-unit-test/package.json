@@ -1,0 +1,19 @@
+{
+  "name": "epay-sparta-plugin-unit-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test.git"
+  },
+  "author": "CodeLittlePrince",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test/issues"
+  },
+  "homepage": "https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test#readme"
+}
