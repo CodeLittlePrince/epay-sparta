@@ -1,0 +1,42 @@
+{
+  "name": "epay-sparta-plugin-e2e-test",
+  "version": "0.0.1",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "lint": "eslint --ext .js ./lib/"
+  },
+  "files": [
+    "lib"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test.git"
+  },
+  "keywords": [
+    "epay-sparta"
+  ],
+  "author": {
+    "name": "子咻",
+    "email": "1006312908@qq.com",
+    "url": "https://github.com/CodeLittlePrince"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test/issues"
+  },
+  "homepage": "https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "husky": "^3.1.0"
+  },
+  "dependencies": {
+    "mocha": "^6.2.2",
+    "nightmare": "^3.0.2"
+  }
+}
