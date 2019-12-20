@@ -3,8 +3,10 @@
  */
 import * as dom from 'common/js/utils/dom.js'
 
-const expect = require('chai').expect
+const chai = require('chai')
 const sinon = require('sinon')
+const expect = chai.expect
+chai.use(require('sinon-chai'))
 
 describe('utils/dom', () => {
   // 测试hasClass
