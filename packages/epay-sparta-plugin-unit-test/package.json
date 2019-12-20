@@ -1,19 +1,48 @@
 {
-  "name": "epay-sparta-plugin-unit-test",
-  "version": "1.0.0",
+  "name": "@epay-sparta/cli-plugin-unit-test",
+  "version": "0.0.2",
   "description": "",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint --ext .js ./lib/"
   },
+  "files": [
+    "lib"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test.git"
   },
+  "keywords": [
+    "epay-sparta"
+  ],
   "author": "CodeLittlePrince",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test/issues"
   },
-  "homepage": "https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test#readme"
+  "homepage": "https://github.com/CodeLittlePrince/epay-sparta-plugin-unit-test#readme",
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  },
+  "devDependencies": {
+    "eslint": "^6.7.2",
+    "husky": "^3.1.0"
+  },
+  "dependencies": {
+    "babel-plugin-istanbul": "^5.2.0",
+    "chai": "^4.2.0",
+    "karma": "^4.4.1",
+    "karma-coverage": "^2.0.1",
+    "karma-jasmine": "^2.0.1",
+    "karma-mocha": "^1.3.0",
+    "karma-mocha-reporter": "^2.2.5",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "^4.0.2",
+    "mocha": "^6.2.2",
+    "sinon": "^7.5.0",
+    "sinon-chai": "^3.3.0"
+  }
 }
