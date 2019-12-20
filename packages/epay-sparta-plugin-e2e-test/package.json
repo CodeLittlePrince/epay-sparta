@@ -1,5 +1,5 @@
 {
-  "name": "epay-sparta-plugin-e2e-test",
+  "name": "@epay-sparta/cli-plugin-e2e-test",
   "version": "0.0.1",
   "description": "",
   "main": "lib/index.js",
