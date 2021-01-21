@@ -16,4 +16,4 @@ describe('cb-dog', () => {
   it('methods: add', () => {
     expect(wrapper.vm.add(1, 2)).toBe(3)
   })
-}) 
+})

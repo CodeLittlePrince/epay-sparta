@@ -2,7 +2,7 @@
   "env": {
     "jest": true
   },
-  "plugins": ["jest"],
+
   "globals": {
     "describe": true,
     "it": true,
