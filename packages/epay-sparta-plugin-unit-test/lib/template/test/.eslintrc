@@ -1,12 +1,11 @@
 {
   "env": {
-    "mocha": true
+    "jest": true
   },
+  "plugins": ["jest"],
   "globals": {
-    "expect": true,
-    "sinon": true
-  },
-  "rules": {
-    "no-unused-expressions": 0
+    "describe": true,
+    "it": true,
+    "expect": true
   }
 }

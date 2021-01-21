@@ -1,26 +1,25 @@
-const Server = require('karma').Server
+const jest = require('jest')
 
 class TestUnitService {
   constructor(context) {
-    this.config = this._mergeKarmaConfig(context)
+    this.config = this._mergeJestConfig(context)
   }
 
   async run() {
-    const server = new Server(this.config)
-    server.start()
+    jest.run(this.config)
   }
   
-  _mergeKarmaConfig(context) {
-    // Merge default karma and user karma configuration
-    const defaultKarmaConfig = require('./karma.conf')
-    let spartaKarmaConfig = {}
-    if (context.spartaConfig && context.spartaConfig.karma) {
-      spartaKarmaConfig = context.spartaConfig.karma
+  _mergeJestConfig(context) {
+    // Merge default jest and user jest configuration
+    const defaultJestConfig = require('./jest.config')
+    let spartaJestConfig = {}
+    if (context.spartaConfig && context.spartaConfig.jest) {
+      spartaJestConfig = context.spartaConfig.jest
     }
     return Object.assign(
       {},
-      defaultKarmaConfig.getConfig(context.webpackConfig),
-      spartaKarmaConfig
+      defaultJestConfig.getConfig(context.webpackConfig),
+      spartaJestConfig
     )
   }
 }
