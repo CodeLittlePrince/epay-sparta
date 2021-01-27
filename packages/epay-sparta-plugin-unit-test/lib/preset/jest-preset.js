@@ -48,7 +48,8 @@ module.exports = {
   collectCoverageFrom: [
     // 坑：{js,vue}之间不要有空格
     '<rootDir>/src/common/**/*.{js,vue}',
-    '<rootDir>/src/componentsBase/**/*.{js,vue}'
+    '<rootDir>/src/componentsBase/**/*.{js,vue}',
+    '<rootDir>/src/filters/**/*.js'
   ],
 
   snapshotSerializers: [
