@@ -1,6 +1,6 @@
 {
   "name": "@epay-sparta/cli-plugin-e2e-test",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
@@ -32,12 +32,13 @@
     }
   },
   "devDependencies": {
-    "eslint": "^6.7.2",
-    "husky": "^3.1.0"
+    "eslint": "^7.20.0",
+    "husky": "^5.0.9"
   },
   "dependencies": {
-    "chai": "^4.2.0",
-    "mocha": "^6.2.2",
-    "nightmare": "^3.0.2"
+    "chai": "^4.3.0",
+    "chrome-paths": "^1.0.1",
+    "mocha": "^8.3.0",
+    "puppeteer-core": "^7.1.0"
   }
 }
