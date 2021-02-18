@@ -1,8 +1,4 @@
-import * as dom from '@/common/js/utils/dom'
-const chai = require('chai')
-const sinon = require('sinon')
-const expect = chai.expect
-chai.use(require('sinon-chai'))
+import * as dom from 'common/js/utils/dom'
 
 describe('utils/dom', () => {
   // 测试hasClass
@@ -10,15 +6,15 @@ describe('utils/dom', () => {
     const ele = document.createElement('div')
     ele.className = 'base kitty'
     // 是否含有base
-    expect(dom.hasClass(ele, 'base')).to.be.equal(true)
+    expect(dom.hasClass(ele, 'base')).to.be.true
     // 是否含有kitty
-    expect(dom.hasClass(ele, 'kitty')).to.be.equal(true)
+    expect(dom.hasClass(ele, 'kitty')).to.be.true
     // 是否含有tom
-    expect(dom.hasClass(ele, 'tom')).to.be.equal(false)
+    expect(dom.hasClass(ele, 'tom')).to.be.false
     // 空格情况
-    expect(() => dom.hasClass(ele, 'x y')).toThrowError()
+    expect(() => dom.hasClass(ele, 'x y')).to.throw()
     // 无参数
-    expect(dom.hasClass()).to.be.equal(false)
+    expect(dom.hasClass()).to.be.false
   })
   // 测试addClass
   it('addClass', () => {

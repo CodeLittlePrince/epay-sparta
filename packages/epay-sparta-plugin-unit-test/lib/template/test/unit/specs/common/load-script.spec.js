@@ -1,40 +1,32 @@
-import loadScript from '@/common/js/utils/load-script'
+import loadScript from 'common/js/utils/load-script'
 
 describe('utils/load-script', () => {
 
-  it('load single file', () => {
-    const url = 'a.js'
+  it('load single file', async () => {
+    const url = 'https://cdn.bootcdn.net/ajax/libs/vue/3.0.2/vue.global.js'
 
-    loadScript(url)
-
-    const script = document.getElementsByTagName('script')[0]
-    expect(script.src).toBe(`http://localhost/${url}`)
-
-    // 清除script标签，不然影响之后的子集测试
-    script.parentNode.removeChild(script)
+    const vue = await loadScript(url)
+    
+    expect(typeof vue === 'object').to.be.true
   })
 
-  it('load multiple files', () => {
+  it('load multiple files', async () => {
     const urls = [
-      'a.js',
-      'b.js',
-      'c.js'
+      'https://cdn.bootcdn.net/ajax/libs/vue/3.0.2/vue.global.js',
+      'https://cdn.bootcdn.net/ajax/libs/jquery/3.5.1/jquery.min.js',
     ]
 
-    loadScript(urls)
-
-    const scripts = document.getElementsByTagName('script')
-    for (let i = 0, len = scripts.length; i < len; i++) {
-      const script = scripts[i]
-      expect(script.src).toBe(`http://localhost/${urls[i]}`)
-    }
+    const results = await loadScript(urls)
+    
+    expect(typeof results[0] === 'object').to.be.true
+    expect(typeof results[1] === 'object').to.be.true
   })
 
   it('param format error', () => {
     return loadScript(
-      { src: 'a.js' }
+      { src: 'xxx.js' }
     ).catch(err => {
-      expect(err).toBe('js path format error')
+      expect(err).to.be.equal('js path format error')
     })
   })
 })

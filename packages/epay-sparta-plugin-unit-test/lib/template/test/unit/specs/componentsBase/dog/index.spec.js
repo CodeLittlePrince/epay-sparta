@@ -1,19 +1,15 @@
 import { shallowMount } from '@vue/test-utils'
-import Dog from '@/componentsBase/dog'
+import Dog from 'componentsBase/dog'
 
 describe('cb-dog', () => {
-  const wrapper = shallowMount(Dog, {
-    propsData: {
-      name: 'Tom'
-    }
-  })
+  const wrapper = shallowMount(Dog)
 
-  it('props: name', () => {
-    wrapper.setProps({ name: 'Tom' })
-    expect(wrapper.html()).toContain('Tom')
+  it('props: name', async () => {
+    await wrapper.setProps({ name: 'Tom' })
+    expect(wrapper.html()).to.contain('Tom')
   })
 
   it('methods: add', () => {
-    expect(wrapper.vm.add(1, 2)).toBe(3)
+    expect(wrapper.vm.add(1, 2)).to.be.equal(3)
   })
 })
