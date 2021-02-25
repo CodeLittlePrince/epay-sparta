@@ -1,9 +1,9 @@
 /**
  * karma入口文件
  */
-// import Vue from 'vue'
+import Vue from 'vue'
 
-// Vue.config.productionTip = false
+Vue.config.productionTip = false
 
 const chai = require('chai')
 const sinon = require('sinon')
@@ -22,8 +22,8 @@ testsContext.keys().forEach(testsContext)
 // you can also change this to match only the subset of files that
 // you want coverage for.
 const srcContexts = [
-  require.context('../../src/common/js/', true, /\.js$/),
-  // require.context('../../src/componentsBase/', true, /\.(js|vue)$/),
+  require.context('common/js/', true, /\.js$/),
+  require.context('componentsBase/', true, /\.(js|vue)$/),
 ]
 
 srcContexts.forEach(srcContext => {

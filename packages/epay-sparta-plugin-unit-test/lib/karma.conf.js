@@ -38,7 +38,7 @@ module.exports.getConfig = webpackConfig => {
     coverageReporter: {
       dir: 'test/unit/coverage',
       reporters: [
-        { type: 'lcov', subdir: '.' },
+        { type: 'html', subdir: '.' },
         { type: 'text-summary' }
       ]
     },
