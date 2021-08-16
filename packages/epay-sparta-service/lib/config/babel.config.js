@@ -15,7 +15,7 @@ module.exports = {
     ['@babel/plugin-proposal-class-properties', { 'loose': true }],
     ['@babel/plugin-proposal-private-methods', { 'loose': true }]
   ],
-  'env': process.env.BABEL_ENV === 'test' ? {
+  'env': {
     'test': {
       'plugins': [
         ['babel-plugin-istanbul', {
@@ -23,5 +23,5 @@ module.exports = {
         }]
       ]
     }
-  } : {}
+  }
 }
