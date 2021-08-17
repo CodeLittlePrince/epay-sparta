@@ -5,14 +5,12 @@ module.exports = {
       {
         'modules': false,
         'useBuiltIns': 'usage',
-        'corejs': '3'
+        'corejs': {
+          'version': 3,
+          'proposals': true
+        }
       }
     ]
-  ],
-  'plugins': [
-    ['@babel/plugin-proposal-object-rest-spread', { 'loose': true, 'useBuiltIns': true }], // babel-preset-env已依赖安装
-    ['@babel/plugin-proposal-class-properties', { 'loose': true }],
-    ['@babel/plugin-proposal-private-methods', { 'loose': true }]
   ],
   'env': {
     'test': {
