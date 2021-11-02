@@ -1,0 +1,22 @@
+{
+  "name": "epay-sparta",
+  "version": "1.1.6",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodeLittlePrince/epay-sparta.git"
+  },
+  "author": "nijunjie@corp.netease.com",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodeLittlePrince/epay-sparta/issues"
+  },
+  "homepage": "https://github.com/CodeLittlePrince/epay-sparta#readme",
+  "devDependencies": {
+    "lerna": "^4.0.0"
+  }
+}
