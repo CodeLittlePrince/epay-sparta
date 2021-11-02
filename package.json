@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "commit": "git-cz"
   },
   "repository": {
     "type": "git",
@@ -17,6 +17,13 @@
   },
   "homepage": "https://github.com/CodeLittlePrince/epay-sparta#readme",
   "devDependencies": {
-    "lerna": "^4.0.0"
+    "git-cz": "^4.8.0",
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^2.2.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
