@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "prepare": "husky install",
     "commit": "git-cz"
   },
   "repository": {
@@ -17,7 +18,11 @@
   },
   "homepage": "https://github.com/CodeLittlePrince/epay-sparta#readme",
   "devDependencies": {
+    "@commitlint/cli": "^14.1.0",
+    "@commitlint/config-conventional": "^14.1.0",
+    "cz-conventional-changelog": "^3.3.0",
     "git-cz": "^4.8.0",
+    "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "lerna-changelog": "^2.2.0"
   },
