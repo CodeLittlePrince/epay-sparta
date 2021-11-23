@@ -12,6 +12,9 @@ module.exports = {
       }
     ]
   ],
+  'plugins': [
+    'transform-vue-jsx',
+  ],
   'env': {
     'test': {
       'plugins': [
@@ -20,5 +23,5 @@ module.exports = {
         }]
       ]
     }
-  }
+  },
 }
