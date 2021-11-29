@@ -1,6 +1,6 @@
 {
   "name": "@epay-sparta/cli-plugin-unit-test",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -24,7 +24,6 @@
       "pre-commit": "npm run lint"
     }
   },
-  "devDependencies": {},
   "dependencies": {
     "babel-plugin-istanbul": "^6.0.0",
     "chai": "^4.3.4",

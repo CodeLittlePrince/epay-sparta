@@ -1,6 +1,6 @@
 {
   "name": "@epay-sparta/cli-plugin-e2e-test",
-  "version": "0.1.2",
+  "version": "1.2.0",
   "description": "",
   "main": "lib/index.js",
   "files": [
@@ -28,7 +28,6 @@
       "pre-commit": "npm run lint"
     }
   },
-  "devDependencies": {},
   "dependencies": {
     "chai": "^4.3.4",
     "chrome-paths": "^1.0.1",
