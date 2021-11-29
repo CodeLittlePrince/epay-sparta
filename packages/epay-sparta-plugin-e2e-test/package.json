@@ -3,9 +3,6 @@
   "version": "0.1.2",
   "description": "",
   "main": "lib/index.js",
-  "scripts": {
-    "lint": "eslint --ext .js ./lib/"
-  },
   "files": [
     "lib"
   ],
@@ -31,12 +28,9 @@
       "pre-commit": "npm run lint"
     }
   },
-  "devDependencies": {
-    "eslint": "^7.20.0",
-    "husky": "^5.0.9"
-  },
+  "devDependencies": {},
   "dependencies": {
-    "chai": "^4.3.0",
+    "chai": "^4.3.4",
     "chrome-paths": "^1.0.1",
     "mocha": "^8.3.0",
     "puppeteer-core": "^7.1.0"
