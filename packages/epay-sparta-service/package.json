@@ -1,6 +1,6 @@
 {
   "name": "@epay-sparta/cli-service",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "engines": {
     "node": ">=8"
@@ -29,12 +29,11 @@
     "url": "https://github.com/CodeLittlePrince/epay-sparta-service/issues"
   },
   "homepage": "https://github.com/CodeLittlePrince/epay-sparta-service#readme",
-  "devDependencies": {},
   "dependencies": {
     "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.16.3",
     "@babel/plugin-syntax-jsx": "^7.16.0",
     "@babel/preset-env": "^7.15.0",
-    "@babel/eslint-parser": "^7.16.3",
     "@mapbox/stylelint-processor-arbitrary-tags": "^0.3.0",
     "autoprefixer": "^7.2.6",
     "babel-helper-vue-jsx-merge-props": "^2.0.3",
@@ -46,9 +45,9 @@
     "core-js": "^3.16.1",
     "css-loader": "^3.6.0",
     "eslint": "^8.3.0",
-    "eslint-webpack-plugin": "^3.1.1",
     "eslint-plugin-html": "^6.2.0",
     "eslint-plugin-vue": "^8.1.1",
+    "eslint-webpack-plugin": "^3.1.1",
     "file-loader": "^2.0.0",
     "friendly-errors-webpack-plugin": "^1.7.0",
     "html-webpack-plugin": "^4.5.2",
