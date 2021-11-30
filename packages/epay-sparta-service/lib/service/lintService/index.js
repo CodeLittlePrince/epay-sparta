@@ -1,6 +1,6 @@
-// https://github.com/eslint/eslint/blob/master/docs/developer-guide/nodejs-api.md#cliengine
+// https://eslint.org/docs/developer-guide/nodejs-api
 const path = require('path')
-const CLIEngine = require('eslint').CLIEngine
+const { ESLint } = require('eslint')
 const stylelint = require('stylelint')
 const { done, info, error } = require('../../utils')
 
@@ -18,7 +18,7 @@ class LintService {
   _lintJs() {
     return new Promise((resolve, reject) => {
       info('Linting js and vue ...')
-      const cli = new CLIEngine({
+      const cli = new ESLint({
         extensions: ['.vue', '.js']
       })
       const report = cli.executeOnFiles([this.context.resolve('src')])

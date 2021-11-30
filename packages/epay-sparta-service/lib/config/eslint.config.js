@@ -5,23 +5,23 @@ module.exports = {
     'node': true,
     'es6': true
   },
-  // https://stackoverflow.com/questions/38296761/how-to-support-es7-in-eslint
-  // 为了让eslint支持es7或更高的语法
-  // "parser": "babel-eslint",
   'extends': [
     'eslint:recommended',
     'plugin:vue/recommended'
   ],
+  'parser': 'vue-eslint-parser',
   'parserOptions': {
-    'parser': 'babel-eslint',
+    'parser': '@babel/eslint-parser',
+    'ecmaVersion': 'latest',
     'sourceType': 'module'
   },
   'plugins': [
     // https://github.com/BenoitZugmeyer/eslint-plugin-html
-    // 支持 *.vue lint
-    // "html"
-    'vue'
+    'html'
   ],
+  'settings': {
+    'html/html-extensions': ['.html', '.vue'],
+  },
   // https://eslint.org/docs/rules/
   'rules': {
     'indent': [
@@ -58,6 +58,7 @@ module.exports = {
     'vue/component-name-in-template-casing': 0,
     'vue/multiline-html-element-content-newline': 0,
     'vue/singleline-html-element-content-newline': 0,
+    'vue/component-definition-name-casing': 0,
     'vue/max-attributes-per-line': [2, {
       'singleline': 3,
       'multiline': {

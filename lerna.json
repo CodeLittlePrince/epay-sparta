@@ -5,7 +5,8 @@
   "version": "1.2.0",
   "command": {
     "bootstrap": {
-      "hoist": true
+      "hoist": true,
+      "strict": true
     },
     "version": {
       "conventionalCommits": true,

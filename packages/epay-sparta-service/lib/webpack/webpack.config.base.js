@@ -4,6 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const WebpackBar = require('webpackbar')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const ESLintPlugin = require('eslint-webpack-plugin')
 
 function resolve(dir) {
   return path.resolve(process.cwd(), dir)
@@ -125,7 +126,6 @@ module.exports = {
             // Use cache carefully 😤It will cache although you have changed .browserslistrc sometimes.
             options: { cacheDirectory: true }
           },
-          { loader: 'eslint-loader', options: { cache: true } }
         ]
       },
       {
@@ -136,6 +136,9 @@ module.exports = {
     ]
   },
   plugins: [
+    new ESLintPlugin({
+      failOnWarning: true
+    }),
     new WebpackBar(),
     // Make sure to include the plugin for the magic
     new VueLoaderPlugin(),

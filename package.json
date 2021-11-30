@@ -6,7 +6,9 @@
   "scripts": {
     "prepare": "husky install",
     "commit": "git-cz",
-    "lint": "eslint packages/**/*.js"
+    "lint": "eslint packages/**/*.js",
+    "demo": "lerna run --scope=@epay-sparta/demo demo",
+    "genPkglock": "lerna run --parallel genPkglock"
   },
   "repository": {
     "type": "git",

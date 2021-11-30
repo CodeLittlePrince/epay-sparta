@@ -3,6 +3,9 @@
   "version": "1.2.0",
   "description": "",
   "main": "lib/index.js",
+  "scripts": {
+    "genPkglock": "npm i --package-lock-only"
+  },
   "files": [
     "lib"
   ],
@@ -23,11 +26,6 @@
     "url": "https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test/issues"
   },
   "homepage": "https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test#readme",
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint"
-    }
-  },
   "dependencies": {
     "chai": "^4.3.4",
     "chrome-paths": "^1.0.1",

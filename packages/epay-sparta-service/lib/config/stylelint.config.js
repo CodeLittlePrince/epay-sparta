@@ -9,7 +9,7 @@ module.exports = {
     'at-rule-no-unknown': [
       true,
       {
-        'ignoreAtRules': ['function', 'if', 'each', 'include', 'mixin']
+        'ignoreAtRules': ['function', 'if', 'each', 'include', 'mixin', 'for']
       }
     ],
     'no-empty-source': null,
@@ -20,6 +20,6 @@ module.exports = {
     'selector-list-comma-newline-after': null,
     'unit-case': null,
     'comment-empty-line-before': null,
-    'no-descending-specificity': null
+    'no-descending-specificity': null,
   }
 }
