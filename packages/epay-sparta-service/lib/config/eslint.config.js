@@ -59,6 +59,7 @@ module.exports = {
     'vue/multiline-html-element-content-newline': 0,
     'vue/singleline-html-element-content-newline': 0,
     'vue/component-definition-name-casing': 0,
+    'vue/multi-word-component-names': 0,
     'vue/max-attributes-per-line': [2, {
       'singleline': 3,
       'multiline': {

@@ -13,7 +13,7 @@
 </template>
 
 <style lang="scss">
-  @import '~common/scss/variable';
+  @import "~common/scss/variable";
 
   .c-nav {
     font-size: 0;

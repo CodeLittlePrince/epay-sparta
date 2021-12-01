@@ -15,35 +15,35 @@ class LintService {
     this._doneTip()
   }
 
-  _lintJs() {
-    return new Promise((resolve, reject) => {
-      info('Linting js and vue ...')
-      const cli = new ESLint({
-        extensions: ['.vue', '.js']
-      })
-      const report = cli.executeOnFiles([this.context.resolve('src')])
-      const formatter = cli.getFormatter()
-      const results = formatter(report.results)
-      if (results) {
-        console.log(results)
-      }
-      // Fail once there is a warning or error
-      if (report.errorCount || report.warningCount) {
-        error('Linting js fail.')
-        reject()
-        process.exit(1)
-      } else {
-        resolve()
-      }
+  async _lintJs() {
+    info('Linting js and vue ...')
+    const cli = new ESLint({
+      extensions: ['.vue', '.js']
     })
+    const report = await cli.lintFiles([this.context.resolve('src')])
+    const formatter = await cli.loadFormatter('stylish')
+    const results = formatter.format(report)
+    if (results) {
+      console.log(results)
+    }
+    // Fail once there is a warning or error
+    let errorCount = 0
+    let warningCount = 0
+    report.forEach(item => {
+      errorCount += item.errorCount
+      warningCount += item.warningCount
+    })
+    if (errorCount || warningCount) {
+      error('Linting js fail.')
+      process.exit(1)
+    }
   }
 
   _lintStyle() {
     return new Promise((resolve, reject) => {
       info('Linting scss ...')
       stylelint.lint({
-        files: path.relative(process.cwd(), 'src') + '/**/*.(vue|scss)',
-        syntax: 'scss',
+        files: path.relative(process.cwd(), 'src') + '/**/*.(vue|scss|css)',
       }).then(function(res) {
         if (res.errored) {
           const stylelintOutput = require('stylelint/lib/formatters/stringFormatter')(res.results)

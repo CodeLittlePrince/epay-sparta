@@ -4,7 +4,10 @@ module.exports = {
     '**/*.md'
   ],
   'processors': ['@mapbox/stylelint-processor-arbitrary-tags'],
-  'extends': 'stylelint-config-standard',
+  'plugins': [
+    'stylelint-scss'
+  ],
+  'extends': 'stylelint-config-standard-scss',
   'rules': {
     'at-rule-no-unknown': [
       true,
