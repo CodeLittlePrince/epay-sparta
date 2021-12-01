@@ -66,8 +66,8 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~common/scss/variable';
-@import '~common/scss/mixin';
+@import "~common/scss/variable";
+@import "~common/scss/mixin";
 
 .home {
   .content {
@@ -98,7 +98,7 @@ export default {
       height: 100px;
       border-radius: 50%;
       overflow: hidden;
-      @include bg-image('~common/img/home');
+      @include bg-image("~common/img/home");
       background-size: contain;
     }
 

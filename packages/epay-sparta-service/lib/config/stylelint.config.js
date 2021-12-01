@@ -1,6 +1,5 @@
 module.exports = {
   'ignoreFiles': [
-    '**/*.js',
     '**/*.md'
   ],
   'processors': ['@mapbox/stylelint-processor-arbitrary-tags'],
@@ -9,12 +8,6 @@ module.exports = {
   ],
   'extends': 'stylelint-config-standard-scss',
   'rules': {
-    'at-rule-no-unknown': [
-      true,
-      {
-        'ignoreAtRules': ['function', 'if', 'each', 'include', 'mixin', 'for']
-      }
-    ],
     'no-empty-source': null,
     'rule-empty-line-before': null,
     'at-rule-empty-line-before': null,
@@ -24,5 +17,7 @@ module.exports = {
     'unit-case': null,
     'comment-empty-line-before': null,
     'no-descending-specificity': null,
+    'no-empty-first-line': null,
+    'selector-class-pattern': null,
   }
 }
