@@ -16,8 +16,7 @@ module.exports = {
     'sourceType': 'module'
   },
   'plugins': [
-    // https://github.com/BenoitZugmeyer/eslint-plugin-html
-    'html'
+    'vue'
   ],
   'settings': {
     'html/html-extensions': ['.html', '.vue'],

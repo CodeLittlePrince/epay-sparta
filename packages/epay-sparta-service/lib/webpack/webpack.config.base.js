@@ -5,6 +5,7 @@ const WebpackBar = require('webpackbar')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const ESLintPlugin = require('eslint-webpack-plugin')
+const StylelintPlugin = require('stylelint-webpack-plugin')
 
 function resolve(dir) {
   return path.resolve(process.cwd(), dir)
@@ -137,7 +138,11 @@ module.exports = {
   },
   plugins: [
     new ESLintPlugin({
-      failOnWarning: true
+      failOnWarning: true,
+      extensions: ['vue', 'js', 'html']
+    }),
+    new StylelintPlugin({
+      extensions: ['vue', 'html', 'css', 'scss', 'sass']
     }),
     new WebpackBar(),
     // Make sure to include the plugin for the magic

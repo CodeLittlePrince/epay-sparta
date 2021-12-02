@@ -2,9 +2,14 @@ module.exports = {
   'ignoreFiles': [
     '**/*.md'
   ],
-  'processors': ['@mapbox/stylelint-processor-arbitrary-tags'],
-  'plugins': [
-    'stylelint-scss'
+  'processors': [
+    ['@mapbox/stylelint-processor-arbitrary-tags', { fileFilterRegex: [/\.vue$/] }]
+  ],
+  'overrides': [
+    {
+      'files': ['**/*.scss'],
+      'customSyntax': 'postcss-scss'
+    }
   ],
   'extends': 'stylelint-config-standard-scss',
   'rules': {
