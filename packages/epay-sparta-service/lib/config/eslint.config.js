@@ -61,6 +61,7 @@ module.exports = {
       'multiline': {
         'max': 3,
       }
-    }]
+    }],
+    'vue/no-mutating-props': 0,
   }
 }
