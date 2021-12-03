@@ -3,9 +3,7 @@ module.exports = {
     '**/*.js',
     '**/*.md'
   ],
-  'processors': [
-    ['@mapbox/stylelint-processor-arbitrary-tags']
-  ],
+  'processors': ['@mapbox/stylelint-processor-arbitrary-tags'],
   'overrides': [
     {
       'files': ['**/*.scss'],
