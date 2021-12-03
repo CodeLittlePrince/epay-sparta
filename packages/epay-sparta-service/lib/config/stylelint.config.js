@@ -1,9 +1,10 @@
 module.exports = {
   'ignoreFiles': [
+    '**/*.js',
     '**/*.md'
   ],
   'processors': [
-    ['@mapbox/stylelint-processor-arbitrary-tags', { fileFilterRegex: [/\.vue$/] }]
+    ['@mapbox/stylelint-processor-arbitrary-tags']
   ],
   'overrides': [
     {

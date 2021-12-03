@@ -18,9 +18,6 @@ module.exports = {
   'plugins': [
     'vue'
   ],
-  'settings': {
-    'html/html-extensions': ['.html', '.vue'],
-  },
   // https://eslint.org/docs/rules/
   'rules': {
     'indent': [
