@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "prepare": "husky install",
-    "commit": "git-cz",
+    "commit": "git cz",
     "lint": "eslint packages/epay-sparta-*/**/*.js"
   },
   "repository": {
@@ -23,7 +23,6 @@
     "@commitlint/config-conventional": "^14.1.0",
     "cz-conventional-changelog": "^3.3.0",
     "eslint": "^8.3.0",
-    "git-cz": "^4.8.0",
     "husky": "^7.0.4",
     "lerna": "^4.0.0",
     "lerna-changelog": "^2.2.0"
@@ -32,6 +31,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "dependencies": {}
+  }
 }
