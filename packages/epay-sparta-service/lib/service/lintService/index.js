@@ -43,7 +43,7 @@ class LintService {
     return new Promise((resolve, reject) => {
       info('Linting scss ...')
       stylelint.lint({
-        files: path.relative(process.cwd(), 'src') + '/**/*.(vue|scss|css)',
+        files: path.relative(process.cwd(), 'src') + '/**/*.(html|vue|scss|css)'
       }).then(function(res) {
         if (res.errored) {
           const stylelintOutput = require('stylelint/lib/formatters/stringFormatter')(res.results)

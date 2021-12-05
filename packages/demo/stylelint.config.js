@@ -1,3 +1,3 @@
 module.exports = {
-  ...require('@epay-sparta/cli-service/lib/config/stylelint.config')
+  'extends': '@epay-sparta/cli-service/lib/config/stylelint.config',
 }

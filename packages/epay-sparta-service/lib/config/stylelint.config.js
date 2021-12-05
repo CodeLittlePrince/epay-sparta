@@ -3,21 +3,13 @@ module.exports = {
     '**/*.js',
     '**/*.md'
   ],
-  'processors': [
-    [
-      '@mapbox/stylelint-processor-arbitrary-tags',
-      {
-        fileFilterRegex: [/\.html$/, /\.vue$/]
-      }
-    ]
-  ],
   'overrides': [
     {
-      'files': ['**/*.scss'],
+      'files': ['**/*.(scss|css|html|vue)'],
       'customSyntax': 'postcss-scss'
     },
     {
-      'files': ['*.html', '**/*.html'],
+      'files': ['**/*.(html|vue)'],
       'customSyntax': 'postcss-html'
     }
   ],
@@ -39,7 +31,7 @@ module.exports = {
     'function-url-quotes': null,
     'keyframes-name-pattern': null,
     'property-no-vendor-prefix': null,
-    'scss/dollar-variable-empty-line-before': null,
     'color-function-notation': null,
+    'scss/dollar-variable-empty-line-before': null,
   }
 }
