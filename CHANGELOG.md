@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.5.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.4.2...v1.5.0) (2021-12-05)
+
+
+### Features
+
+* 开发编译阶段去除eslint和stylelint ([6d2a1e0](https://github.com/CodeLittlePrince/epay-sparta/commit/6d2a1e06a3a513c6fd8eb114234c0e9bd409155a))
+
+
+
+
+
 ## [1.4.2](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.4.1...v1.4.2) (2021-12-05)
 
 **Note:** Version bump only for package epay-sparta
