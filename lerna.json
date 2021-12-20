@@ -11,12 +11,13 @@
     "version": {
       "conventionalCommits": true,
       "createRelease": "github",
-      "message": "chore(release): publish"
+      "message": "chore(release): publish %s"
     }
   },
   "changelog": {
     "repo": "lerna/lerna-changelog",
     "labels": {
+      "feat": ":rocket: New Feature",
       "breaking": ":boom: Breaking Change",
       "enhancement": ":rocket: Enhancement",
       "bug": ":bug: Bug Fix",
