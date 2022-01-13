@@ -142,6 +142,8 @@ class Service {
       this._convertPagesToHtmlWebpackPlugin(config, mode)
       // Convert publicPath to output.publicPath
       this._convertPublicPathToOutputPublicPath(config)
+      // Convert alias to resolve.alias
+      this._convertAliasToResolveAlias(config)
       return config
     }
     return {}
@@ -206,10 +208,20 @@ class Service {
   _convertPublicPathToOutputPublicPath(spartaWebpackConfigCopy) {
     const config = spartaWebpackConfigCopy
     if (config.hasOwnProperty('publicPath')) {
-      const publicPath = config.publicPath
+      const { publicPath } = config
       config.output = {}
       config.output.publicPath = publicPath
       delete config.publicPath
+    }
+  }
+
+  _convertAliasToResolveAlias(spartaWebpackConfigCopy) {
+    const config = spartaWebpackConfigCopy
+    if (config.hasOwnProperty('alias')) {
+      const { alias } = config
+      config.resolve = {}
+      config.resolve.alias = alias
+      delete config.alias
     }
   }
 }

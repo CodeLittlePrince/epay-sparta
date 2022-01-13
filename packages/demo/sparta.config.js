@@ -1,10 +1,18 @@
 const proxyServerConfig = require('./config/proxyServer')
+const path = require('path')
+
+function resolve(dir) {
+  return path.join(__dirname, dir)
+}
 
 module.exports = {
   favicon: 'favicon.ico',
   webpack: {
     entry: {
       app: ['src/index.js']
+    },
+    alias: {
+      '@': resolve(''),
     },
     pages: [
       {
