@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.6.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.5.0...v1.6.0) (2022-01-13)
+
+
+### Bug Fixes
+
+* demo eslint提示问题 ([785fe88](https://github.com/CodeLittlePrince/epay-sparta/commit/785fe880678cd92cc9cdaf98d9bd166879768e6d))
+
+
+### Features
+
+* 支持alias配置 ([b2f02d1](https://github.com/CodeLittlePrince/epay-sparta/commit/b2f02d1c7796f0af1287337491cab5f69e5303b7))
+
+
+
+
+
 # [1.5.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.4.2...v1.5.0) (2021-12-05)
 
 
