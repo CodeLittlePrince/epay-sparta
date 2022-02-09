@@ -3,6 +3,18 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.7.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.6.0...v1.7.0) (2022-02-09)
+
+
+### Features
+
+* 新增SpeedMeasurePlugin ([620e922](https://github.com/CodeLittlePrince/epay-sparta/commit/620e9224620e866d5ce9b1a3ebfb1c0acf303acb))
+* 增加webpack打包大小写铭感检测 ([818d688](https://github.com/CodeLittlePrince/epay-sparta/commit/818d68886a364c68917e31049f263cd71ad141e3))
+
+
+
+
+
 # [1.6.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.5.0...v1.6.0) (2022-01-13)
 
 
