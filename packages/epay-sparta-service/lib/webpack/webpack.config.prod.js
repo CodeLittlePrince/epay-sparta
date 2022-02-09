@@ -3,6 +3,7 @@ const CleanWebpackPlugin = require('clean-webpack-plugin')
 const webpackConfigBase = require('./webpack.config.base')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
 const { merge } = require('webpack-merge')
 
 module.exports.getConfig = context => {
@@ -52,6 +53,7 @@ module.exports.getConfig = context => {
       hints: 'warning'
     },
     plugins: [
+      new SpeedMeasurePlugin(),
       // 删除build文件夹
       new CleanWebpackPlugin(
         'dist',
