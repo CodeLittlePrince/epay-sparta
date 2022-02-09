@@ -4,6 +4,7 @@ const VueLoaderPlugin = require('vue-loader/lib/plugin')
 const WebpackBar = require('webpackbar')
 const SpriteLoaderPlugin = require('svg-sprite-loader/plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin')
 // const ESLintPlugin = require('eslint-webpack-plugin')
 // const StylelintPlugin = require('stylelint-webpack-plugin')
 
@@ -139,6 +140,7 @@ module.exports = {
   },
   plugins: [
     new WebpackBar(),
+    new CaseSensitivePathsPlugin(),
     // Make sure to include the plugin for the magic
     new VueLoaderPlugin(),
     new SpriteLoaderPlugin(),
