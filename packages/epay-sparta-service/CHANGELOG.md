@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.8.0](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v1.7.0...v1.8.0) (2022-02-10)
+
+
+### Features
+
+* 优化production时候的输出格式 ([64ae4d9](https://github.com/CodeLittlePrince/epay-sparta-service/commit/64ae4d9bfc43fa9328665f99f93e56bd5c05e16f))
+
+
+
+
+
 # [1.7.0](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v1.6.0...v1.7.0) (2022-02-09)
 
 
