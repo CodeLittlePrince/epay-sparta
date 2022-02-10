@@ -11,13 +11,16 @@ class ProdService {
 
   _compileMessageReport(err, stats) {
     if (err) {
-      console.error(err)
-      return
+      throw err
     }
-    console.log(stats.toString({
-      chunks: false,  // Makes the build much quieter
-      colors: true    // Shows colors in the console
-    }))
+    // terminal输出样式
+    process.stdout.write(stats.toString({
+      colors: true,
+      modules: false,
+      children: false,
+      chunks: false,
+      chunkModules: false
+    }) + '\n')
   }
 }
 
