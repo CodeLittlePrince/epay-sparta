@@ -3,6 +3,19 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.9.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.8.0...v1.9.0) (2022-02-10)
+
+
+### Features
+
+* 为了能够兼容使用lint-staged,validateSegmentFormat失败不终止 ([4c0d5d0](https://github.com/CodeLittlePrince/epay-sparta/commit/4c0d5d0648ef71bcbd182c6f7be7ca57c9c3a4a2))
+* 新增optimize-css-assets-webpack-plugin压缩css ([8422898](https://github.com/CodeLittlePrince/epay-sparta/commit/842289874b8c938aa38df02f25b7d9a9167ca6a6))
+* webpack splitChunks 设置 chunks all ([aa61aa1](https://github.com/CodeLittlePrince/epay-sparta/commit/aa61aa15daadd84ebf70834090a02f046149bbe3))
+
+
+
+
+
 # [1.8.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.7.0...v1.8.0) (2022-02-10)
 
 
