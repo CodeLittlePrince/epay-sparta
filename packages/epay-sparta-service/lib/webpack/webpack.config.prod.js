@@ -4,6 +4,7 @@ const webpackConfigBase = require('./webpack.config.base')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
 const TerserPlugin = require('terser-webpack-plugin')
 const SpeedMeasurePlugin = require('speed-measure-webpack-plugin')
+const OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin')
 const { merge } = require('webpack-merge')
 
 module.exports.getConfig = context => {
@@ -53,7 +54,15 @@ module.exports.getConfig = context => {
       hints: 'warning'
     },
     plugins: [
+      // 测速
       new SpeedMeasurePlugin(),
+      // 压缩css
+      new OptimizeCssAssetsPlugin({
+        assetNameRegExp: /\.css$/g,
+        cssProcessorPluginOptions: {
+          preset: ['default', { discardComments: { removeAll: true } }],
+        },
+      }),
       // 删除build文件夹
       new CleanWebpackPlugin(
         'dist',
