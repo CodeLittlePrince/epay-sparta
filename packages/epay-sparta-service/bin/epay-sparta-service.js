@@ -51,9 +51,6 @@ function applyProcessEnv(processEnvSegments) {
       const key = kv[0]
       const value = kv[1]
       process.env[key] = value
-    } else {
-      error(`Command-line argument format error - '${segment}' is illegal.`)
-      process.exit(1)
     }
   })
 }
