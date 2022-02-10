@@ -25,19 +25,18 @@ module.exports.getConfig = context => {
     optimization: {
       // 分割文件
       splitChunks: {
+        chunks: 'all',
         cacheGroups: {
           vendors: {
             name: 'chunk-vendors',
             test: /[\\/]node_modules[\\/]/,
             priority: -10,
-            chunks: 'initial'
           },
           common: {
             name: 'chunk-common',
-            minChunks: 2,
             priority: -20,
-            chunks: 'initial',
-            reuseExistingChunk: true
+            minSize: 20000, // 默认是20000，如果设置成0则为强制抽离（不过不建议）
+            minChunks: 2,
           }
         }
       },
