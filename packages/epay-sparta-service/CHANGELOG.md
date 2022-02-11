@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.10.0](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v1.9.0...v1.10.0) (2022-02-11)
+
+
+### Features
+
+* 支持lint-staged ([eda54ad](https://github.com/CodeLittlePrince/epay-sparta-service/commit/eda54adcfe06f612a92c1d0f4e2523316e04ba74))
+
+
+
+
+
 # [1.9.0](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v1.8.0...v1.9.0) (2022-02-10)
 
 
