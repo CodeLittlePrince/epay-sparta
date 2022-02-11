@@ -1,5 +1,4 @@
 // https://eslint.org/docs/developer-guide/nodejs-api
-const path = require('path')
 const { ESLint } = require('eslint')
 const stylelint = require('stylelint')
 const { done, info, error } = require('../../utils')
@@ -20,7 +19,7 @@ class LintService {
     const cli = new ESLint({
       extensions: ['.vue', '.js']
     })
-    const report = await cli.lintFiles([this.context.resolve('src')])
+    const report = await cli.lintFiles(this._getJslintTargetFiles())
     const formatter = await cli.loadFormatter('stylish')
     const results = formatter.format(report)
     if (results) {
@@ -42,8 +41,9 @@ class LintService {
   _lintStyle() {
     return new Promise((resolve, reject) => {
       info('Linting scss ...')
+
       stylelint.lint({
-        files: path.relative(process.cwd(), 'src') + '/**/*.(html|vue|scss|css)'
+        files: this._getStylelintTargetFiles()
       }).then(function(res) {
         if (res.errored) {
           const stylelintOutput = require('stylelint/lib/formatters/stringFormatter')(res.results)
@@ -60,6 +60,32 @@ class LintService {
         process.exit(1)
       })
     })
+  }
+
+  _getJslintTargetFiles() {
+    if (this._useLintStaged()) {
+      return this._getLintFiles()
+    } else {
+      return [this.context.resolve('src')]
+    }
+  }
+
+  _getStylelintTargetFiles() {
+    if (this._useLintStaged()) {
+      return this._getLintFiles().filter(file => {
+        return /\.(html|vue|scss|css)$/.test(file)
+      })
+    } else {
+      return this.context.resolve('src/**/*.(html|vue|scss|css)')
+    }
+  }
+
+  _useLintStaged() {
+    return process.env['LINT_STAGED'] === 'ON'
+  }
+
+  _getLintFiles() {
+    return JSON.parse(process.env['lintFiles'])
   }
 
   _doneTip() {

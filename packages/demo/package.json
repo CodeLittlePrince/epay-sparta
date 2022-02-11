@@ -23,7 +23,10 @@
     "online": "epay-sparta-service production --online",
     "test:unit": "epay-sparta-service test:unit",
     "test:e2e": "epay-sparta-service test:e2e",
-    "lint": "epay-sparta-service lint"
+    "lint": "lint-staged"
+  },
+  "lint-staged": {
+    "*.(html|js|vue|scss|css)": "epay-sparta-service lint LINT_STAGED=ON"
   },
   "bugs": {
     "url": "https://github.com/CodeLittlePrince/epay-sparta/issues"
@@ -40,6 +43,7 @@
     "@epay-sparta/cli-plugin-unit-test": "^1.4.2",
     "@vue/test-utils": "^1.3.0",
     "concurrently": "^5.0.1",
+    "lint-staged": "^12.3.3",
     "mock-master": "0.0.5",
     "mockjs": "^1.1.0",
     "nodemon": "^2.0.2"
