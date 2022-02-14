@@ -27,11 +27,12 @@ module.exports.getConfig = context => {
       splitChunks: {
         chunks: 'all',
         cacheGroups: {
-          vendors: {
-            name: 'chunk-vendors',
-            test: /[\\/]node_modules[\\/]/,
-            priority: -10,
-          },
+          // 有些npm包其实只有特定页面才用到，没必要一开始就打进来，配合dynamic import打包进需要的chunk中
+          // vendors: {
+          //   name: 'chunk-vendors',
+          //   test: /[\\/]node_modules[\\/]/,
+          //   priority: -10,
+          // },
           common: {
             name: 'chunk-common',
             priority: -20,
