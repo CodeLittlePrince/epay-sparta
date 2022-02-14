@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [1.11.0](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v1.10.0...v1.11.0) (2022-02-14)
+
+
+### Bug Fixes
+
+* 修复打包三方组件库时候会把字体的内容转成乱码 ([49b9b63](https://github.com/CodeLittlePrince/epay-sparta-service/commit/49b9b633ea3942d439783cbf35ab1c7b2ba323f5))
+
+
+### Features
+
+* 进一步优化chunks ([8666b0b](https://github.com/CodeLittlePrince/epay-sparta-service/commit/8666b0b489c00aa633bf9613ca61aa5018c345f1))
+
+
+
+
+
 # [1.10.0](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v1.9.0...v1.10.0) (2022-02-11)
 
 
