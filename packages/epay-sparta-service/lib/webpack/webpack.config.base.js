@@ -116,8 +116,11 @@ module.exports = {
           { loader: isProduction ? MiniCssExtractPlugin.loader : 'vue-style-loader' },
           { loader: 'css-loader', options: { sourceMap: true } },
           { loader: 'postcss-loader', options: { sourceMap: true } },
-          { loader: 'resolve-url-loader', options: { sourceMap: true } },
-          { loader: 'sass-loader', options: { sourceMap: true } }
+          { loader: 'resolve-url-loader', options: { sourceMap: true } }, // 这个会导致sourcemap出问题，但是队员又需要用这个插件，暂且保留
+          { loader: 'sass-loader', options: {
+            sourceMap: true,
+            sassOptions: { outputStyle: 'expanded' } // outputStyle默认值是compressed，它会导致三方组件库的字体的content乱码；因为我们已经prod中在plugin里用OptimizeCssAssetsPlugin了，所以没必要再使用sass压缩了
+          }}
         ]
       },
       {
