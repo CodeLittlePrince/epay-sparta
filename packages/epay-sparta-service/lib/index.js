@@ -40,9 +40,6 @@ class Service {
     case 'test:e2e':
       SubService = this.resolveNpmPackage('@epay-sparta/cli-plugin-e2e-test')
       break
-    case 'lint':
-      SubService = require('./service/lintService')
-      break
     // If mode is not the one of values unpon, show error tip.
     default:
       this._tipModeError(mode)
@@ -94,7 +91,6 @@ class Service {
         'production',
         'test:unit',
         'test:e2e',
-        'lint'
       ].join(', ').concat('.')
     )
   }

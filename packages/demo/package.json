@@ -23,10 +23,13 @@
     "online": "epay-sparta-service production --online",
     "test:unit": "epay-sparta-service test:unit",
     "test:e2e": "epay-sparta-service test:e2e",
-    "lint": "lint-staged"
+    "lint": "lint-staged",
+    "lint:js": "eslint --ext .vue,.js src",
+    "lint:style": "stylelint \"src/**/*.{html,vue,scss,css}\""
   },
   "lint-staged": {
-    "*.(html|js|vue|scss|css)": "epay-sparta-service lint LINT_STAGED=ON"
+    "src/**/*.(js|vue)": "eslint",
+    "src/**/*.(html|vue|scss|css)": "stylelint"
   },
   "bugs": {
     "url": "https://github.com/CodeLittlePrince/epay-sparta/issues"

@@ -35,9 +35,6 @@ function getArgsFromCommondLine() {
   })
 
   applyProcessEnv(args._.slice(1))
-  if (args._[0] === 'lint' && process.env['LINT_STAGED'] === 'ON') {
-    applyProcessLintFiles(args._.slice(1))
-  }
 
   return args
 }
@@ -60,22 +57,6 @@ function applyProcessEnv(processEnvSegments) {
   })
 }
 
-function applyProcessLintFiles(processLintFilesSegments) {
-  const files = []
-
-  processLintFilesSegments.forEach(segment => {
-    if (validateLintFilesSegmentFormat(segment)) {
-      files.push(segment)
-    }
-  })
-  
-  process.env['lintFiles'] = JSON.stringify(files) // process.env will transform files to string automatically, so we need stringify
-}
-
 function validateEnvSegmentFormat(segment) {
   return /.+=.+/.test(segment)
-}
-
-function validateLintFilesSegmentFormat(segment) {
-  return /\/.+\/.+/.test(segment)
 }
