@@ -19,7 +19,8 @@ class LintService {
     const cli = new ESLint({
       extensions: ['.vue', '.js']
     })
-    const report = await cli.lintFiles(this._getJslintTargetFiles())
+    const files = await this._getJslintTargetFiles(cli)
+    const report = await cli.lintFiles(files)
     const formatter = await cli.loadFormatter('stylish')
     const results = formatter.format(report)
     if (results) {
@@ -42,8 +43,11 @@ class LintService {
     return new Promise((resolve, reject) => {
       info('Linting scss ...')
 
+      const files = this._getStylelintTargetFiles() || []
+      if (files.length === 0) return resolve()
+
       stylelint.lint({
-        files: this._getStylelintTargetFiles()
+        files
       }).then(function(res) {
         if (res.errored) {
           const stylelintOutput = require('stylelint/lib/formatters/stringFormatter')(res.results)
@@ -62,9 +66,18 @@ class LintService {
     })
   }
 
-  _getJslintTargetFiles() {
+  async _getJslintTargetFiles(cli) {
     if (this._useLintStaged()) {
-      return this._getLintFiles()
+      const files = this._getLintFiles()
+
+      const promiseList = files.map(filePath => {
+        return cli.isPathIgnored(filePath)
+      })
+      const ignoreBooleanList = await Promise.all(promiseList)
+
+      return files.filter((filePath, index) => {
+        return !ignoreBooleanList[index]
+      })
     } else {
       return [this.context.resolve('src')]
     }
