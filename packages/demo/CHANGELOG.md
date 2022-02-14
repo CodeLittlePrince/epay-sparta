@@ -3,6 +3,22 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.11.0...v2.0.0) (2022-02-14)
+
+
+### Features
+
+* lint不再使用node API形式 ([095692b](https://github.com/CodeLittlePrince/epay-sparta/commit/095692b14a67a339d71c4a280e7effdfa810c584))
+
+
+### BREAKING CHANGES
+
+* 移除node API形式lint
+
+
+
+
+
 # [1.11.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v1.10.0...v1.11.0) (2022-02-14)
 
 **Note:** Version bump only for package @epay-sparta/demo

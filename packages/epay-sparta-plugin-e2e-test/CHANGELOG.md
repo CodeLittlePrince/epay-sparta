@@ -3,6 +3,14 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.0.0](https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test/compare/v1.11.0...v2.0.0) (2022-02-14)
+
+**Note:** Version bump only for package @epay-sparta/cli-plugin-e2e-test
+
+
+
+
+
 ## [1.4.2](https://github.com/CodeLittlePrince/epay-sparta-plugin-e2e-test/compare/v1.4.1...v1.4.2) (2021-12-05)
 
 **Note:** Version bump only for package @epay-sparta/cli-plugin-e2e-test
