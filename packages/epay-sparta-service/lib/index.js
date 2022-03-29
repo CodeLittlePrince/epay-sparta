@@ -35,10 +35,10 @@ class Service {
       process.env.NODE_ENV = 'test'
       process.env.BABEL_ENV = 'test'
       defaultWebpackConfig = require('./webpack/webpack.config.test').getConfig(this)
-      SubService = this.resolveNpmPackage('@epay-sparta/cli-plugin-unit-test')
+      SubService = require('@epay-sparta/cli-plugin-unit-test')
       break
     case 'test:e2e':
-      SubService = this.resolveNpmPackage('@epay-sparta/cli-plugin-e2e-test')
+      SubService = require('@epay-sparta/cli-plugin-e2e-test')
       break
     // If mode is not the one of values unpon, show error tip.
     default:
@@ -54,23 +54,6 @@ class Service {
 
   resolve(dir) {
     return path.resolve(process.cwd(), dir)
-  }
-
-  resolveNpmPackage(packageName) {
-    const pkgJson = require(this.resolve('package.json'))
-    const hasTargetPackageInPkgJson =
-      pkgJson.devDependencies.hasOwnProperty(packageName) ||
-      pkgJson.dependencies.hasOwnProperty(packageName)
-    if (hasTargetPackageInPkgJson) {
-      const targetPkgPath = this.resolve(`node_modules/${packageName}`)
-      const targetPkgJson = this.require(`${targetPkgPath}/package.json`)
-      return require(path.resolve(targetPkgPath, targetPkgJson.main))
-    }
-    error(
-      `The npm package '${packageName}' hasn't be installed.\n` +
-      `You may try: npm install -S ${packageName}.`
-    )
-    process.exit(1)
   }
 
   require(path) {
