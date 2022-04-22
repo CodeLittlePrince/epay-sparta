@@ -158,6 +158,8 @@ class Service {
    * @param {string} mode excute mode
    */
   _convertPagesToHtmlWebpackPlugin(spartaWebpackConfigCopy, mode) {
+    if (mode.startsWith('test')) return
+    
     const config = spartaWebpackConfigCopy
     if (!config.hasOwnProperty('pages')) {
       // Default pages
