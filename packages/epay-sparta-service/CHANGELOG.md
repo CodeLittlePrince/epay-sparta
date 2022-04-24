@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.4](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v2.0.3...v2.0.4) (2022-04-24)
+
+
+### Bug Fixes
+
+* 修复有pages声明的项目单测启动失败 ([8f503a2](https://github.com/CodeLittlePrince/epay-sparta-service/commit/8f503a27e9d43ceabd3327916eb9a2b501e7272c))
+
+
+
+
+
 ## [2.0.3](https://github.com/CodeLittlePrince/epay-sparta-service/compare/v2.0.2...v2.0.3) (2022-04-22)
 
 
