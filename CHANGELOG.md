@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.0.5](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.0.4...v2.0.5) (2022-05-18)
+
+
+### Bug Fixes
+
+* eslint针对jsx无法解析 ([a29cd9a](https://github.com/CodeLittlePrince/epay-sparta/commit/a29cd9aa558d8d8fa87bbb8b903b6344a13b7def))
+
+
+
+
+
 ## [2.0.4](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.0.3...v2.0.4) (2022-04-24)
 
 
