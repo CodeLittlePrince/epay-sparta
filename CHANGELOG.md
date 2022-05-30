@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.1.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.0.5...v2.1.0) (2022-05-30)
+
+
+### Features
+
+* 配置支持webpack.output.crossOriginLoading ([011e15c](https://github.com/CodeLittlePrince/epay-sparta/commit/011e15c3fe30c0e1429d5cd1f159b1cb9f3fac67))
+
+
+
+
+
 ## [2.0.5](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.0.4...v2.0.5) (2022-05-18)
 
 
