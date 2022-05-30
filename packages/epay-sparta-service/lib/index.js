@@ -193,10 +193,12 @@ class Service {
   _convertPublicPathToOutputPublicPath(spartaWebpackConfigCopy) {
     const config = spartaWebpackConfigCopy
     if (config.hasOwnProperty('publicPath')) {
-      const { publicPath } = config
+      const { publicPath, crossOriginLoading } = config
       config.output = {}
       config.output.publicPath = publicPath
+      config.output.crossOriginLoading = crossOriginLoading || false
       delete config.publicPath
+      delete config.crossOriginLoading
     }
   }
 
