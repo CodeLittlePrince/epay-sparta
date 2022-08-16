@@ -18,6 +18,9 @@ const svgSpriteReg = /__sprite\.svg$/i
 // __dirname: It gives you the path of the currently running file
 // __filename: It returns the directory from which you ran Node
 module.exports = {
+  node: {
+    'crypto': false,
+  },
   resolve: {
     extensions: ['.js', '.vue', '.scss', '.css'],
     alias: {
