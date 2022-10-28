@@ -15,10 +15,10 @@
     "url": "git+https://github.com/CodeLittlePrince/epay-sparta.git"
   },
   "scripts": {
-    "watch": "epay-sparta-service development",
+    "watch": "epay-sparta-service development hello=1",
     "mock": "nodemon -q ./mockServer/index.js",
     "demo": "concurrently \"npm run mock\" \"npm run watch\" --kill-others",
-    "prod": "epay-sparta-service production",
+    "prod": "epay-sparta-service production PREPUB=Y",
     "analyze": "epay-sparta-service production --analyze",
     "online": "epay-sparta-service production --online",
     "test:unit": "epay-sparta-service test:unit",

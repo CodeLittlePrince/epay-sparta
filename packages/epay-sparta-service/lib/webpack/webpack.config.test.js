@@ -15,9 +15,10 @@ module.exports.getConfig = () => {
     plugins: [
       // 定义全局常量
       new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: '"test"'
-        }
+        'process.env': JSON.stringify({
+          ...process.epaySpartaCliArgv,
+          NODE_ENV: 'test'
+        })
       })
     ]
   })

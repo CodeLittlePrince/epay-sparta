@@ -82,10 +82,15 @@ module.exports.getConfig = context => {
       }),
       // 定义全局常量
       new webpack.DefinePlugin({
-        'process.env': {
-          NODE_ENV: '"production"',
-          ONLINE: ONLINE ? 'true' : 'false' // 一般来说，上线之后埋点会用线上正式的key
-        }
+        'process.env': JSON.stringify({
+          ...process.epaySpartaCliArgv,
+          NODE_ENV: 'production',
+          ONLINE: ONLINE ? true : false // 一般来说，上线之后埋点会用线上正式的key
+        })
+      }),
+      // 定义全局常量
+      new webpack.DefinePlugin({
+        'process.env': JSON.stringify(process.epaySpartaCliArgv)
       }),
       // It will make sprite.svg error
       // new webpack.BannerPlugin('Copyright by 网易支付 https://epay.163.com/'),
