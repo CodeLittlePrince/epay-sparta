@@ -14,14 +14,5 @@ module.exports = {
   ],
   'plugins': [
     'transform-vue-jsx',
-  ],
-  'env': {
-    'test': {
-      'plugins': [
-        ['babel-plugin-istanbul', {
-          'extension': ['.js', '.vue']
-        }]
-      ]
-    }
-  },
+  ]
 }
