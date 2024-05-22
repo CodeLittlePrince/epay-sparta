@@ -81,26 +81,13 @@ class Service {
   _mergeWebpackConfig(defaultWebpackConfig, mode) {
     // Load user configuration
     const spartaWebpackConfig = this._loadSpartaWebpackConfig(mode)
-    const hasRules = spartaWebpackConfig.module && spartaWebpackConfig.module.rules
-    let spartaWebpackRulesCopy = null
 
-    // If sparta config has webpack.module.rules, remove the rules after copy it.
-    if (hasRules) {
-      spartaWebpackRulesCopy = cloneDeep(spartaWebpackConfig.module.rules).reverse()
-      delete spartaWebpackConfig.module.rules
-    }
     // Merge configs
     this.webpackConfig = merge(
       this.webpackConfig,
       defaultWebpackConfig,
       spartaWebpackConfig
     )
-    // Unshift webpack.module.rules from spartaWebpackRulesCopy
-    if (hasRules) {
-      spartaWebpackRulesCopy.forEach(rule => {
-        this.webpackConfig.module.rules.unshift(rule)
-      })
-    }
   }
 
   _loadSpartaWebpackConfig(mode) {
