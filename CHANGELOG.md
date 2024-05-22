@@ -3,6 +3,17 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+## [2.3.1](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.3.0...v2.3.1) (2024-05-22)
+
+
+### Bug Fixes
+
+* 直接用webpack-merge 处理 rules ([8379f94](https://github.com/CodeLittlePrince/epay-sparta/commit/8379f948a1eff09d39a26d4d6694cbdfafeec0b2))
+
+
+
+
+
 # [2.3.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.2.0...v2.3.0) (2022-11-07)
 
 
