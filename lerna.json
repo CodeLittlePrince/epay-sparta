@@ -2,11 +2,15 @@
   "packages": [
     "packages/*"
   ],
-  "version": "2.1.2",
+  "useWorkspaces": true,
+  "version": "2.3.0",
   "command": {
     "bootstrap": {
       "hoist": true,
-      "strict": true
+      "strict": true,
+      "npmClientArgs": [
+        "--legacy-peer-deps"
+      ]
     },
     "version": {
       "conventionalCommits": true,

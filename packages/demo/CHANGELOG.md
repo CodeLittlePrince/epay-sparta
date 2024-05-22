@@ -3,6 +3,28 @@
 All notable changes to this project will be documented in this file.
 See [Conventional Commits](https://conventionalcommits.org) for commit guidelines.
 
+# [2.3.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.2.0...v2.3.0) (2022-11-07)
+
+
+### Features
+
+* 将service中的babel的babel-plugin-istanbul配置移除,让使用方自己决定是否需要 ([d675855](https://github.com/CodeLittlePrince/epay-sparta/commit/d675855dc3641fabbda8bec512b076930852010e))
+
+
+
+
+
+# [2.2.0](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.1.2...v2.2.0) (2022-10-28)
+
+
+### Features
+
+* 支持cli传如x=y的参数并注入页面中,以前只能在node中访问 ([e4baa5c](https://github.com/CodeLittlePrince/epay-sparta/commit/e4baa5cad6f318ea348541a8fae39c67777a0150))
+
+
+
+
+
 ## [2.1.2](https://github.com/CodeLittlePrince/epay-sparta/compare/v2.1.1...v2.1.2) (2022-08-16)
 
 **Note:** Version bump only for package @epay-sparta/demo

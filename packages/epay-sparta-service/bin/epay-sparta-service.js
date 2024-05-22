@@ -47,12 +47,15 @@ function getArgsFromCommondLine() {
  * @param {array} processEnvSegments
  */
 function applyProcessEnv(processEnvSegments) {
+  process.epaySpartaCliArgv = {}
+
   processEnvSegments.forEach(segment => {
     if (validateEnvSegmentFormat(segment)) {
       const kv = segment.split('=')
       const key = kv[0]
       const value = kv[1]
       process.env[key] = value
+      process.epaySpartaCliArgv[key] = value // In order to inject to pages, adn only apply x=y arguments
     }
   })
 }

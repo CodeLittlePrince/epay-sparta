@@ -26,6 +26,10 @@ module.exports.getConfig = context => {
           }
         ]
       }),
+      // 定义全局常量
+      new webpack.DefinePlugin({
+        'process.env': JSON.stringify(process.epaySpartaCliArgv)
+      }),
       // 热替换插件
       new webpack.HotModuleReplacementPlugin(),
       // 更友好地输出错误信息

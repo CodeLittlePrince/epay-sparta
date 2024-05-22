@@ -37,6 +37,7 @@ export default {
     }
   },
   mounted() {
+    console.log(process.env)
     // ajax get data
     // this.$ajax.post('/home/hello', { page: 7 }) // FOR POST
     this.$ajax.get(
